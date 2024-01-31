@@ -55,7 +55,7 @@ class Section:
         facies = attribute_convert_and_check(facies)
 
         # check that the thicknesses are numeric
-        if thicknesses.dtype == np.object:
+        if thicknesses.dtype == object:
             raise Exception('Thickness data must be floats or ints.')
 
         # check for NaNs, and get rid of them
@@ -255,7 +255,7 @@ class Section:
             attribute_values = attribute_convert_and_check(attribute_values)
 
             # check that the heights are numeric
-            if attribute_height.dtype == np.object:
+            if attribute_height.dtype == object:
                 raise Exception('Height data must be floats or ints.')
 
             # check that the X and Y have the same length
